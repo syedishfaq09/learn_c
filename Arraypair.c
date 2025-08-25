@@ -15,7 +15,10 @@ int main()
         scanf("%d", &arr[i]);
     }
 
-    int x = 12;
+   int x;
+       printf("\nEnter value of x: ");
+       scanf("%d",&x);
+
     int totalpair = 0;
 
     for (int i = 0; i <= n; i++)
@@ -30,4 +33,5 @@ int main()
         }
     }
     printf("Total pair = %d", totalpair);
+
 }
