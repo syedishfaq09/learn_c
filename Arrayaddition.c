@@ -1,4 +1,4 @@
-// sum of two Arrays.
+// sum of two Matrices..
 
 #include <stdio.h>
 int main()
@@ -38,10 +38,10 @@ int main()
 
     int r2, c2;
 
-    printf("Enter number of rows of 1st array: ");
+    printf("Enter number of rows of 2nd array: ");
     scanf("%d", &r2);
 
-    printf("Enter number of columns of 1st array: ");
+    printf("Enter number of columns of 2nd array: ");
     scanf("%d", &c2);
 
     int arr2[r2][c2];
@@ -50,7 +50,7 @@ int main()
     {
         for (int j = 0; j < c2; j++)
         {
-            printf("Enter element arr1[%d][%d]: ", i, j);
+            printf("Enter element arr2[%d][%d]: ", i, j);
             scanf("%d", &arr2[i][j]);
         }
     }
@@ -78,3 +78,4 @@ int main()
         printf("\n");
     }
 }
+
