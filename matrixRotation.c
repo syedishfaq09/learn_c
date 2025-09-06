@@ -1,21 +1,18 @@
 #include <stdio.h>
 int main()
 {
-    // transpose of matrix without using extra matrix, (swapping mathod).
+    // 90° rotation of matrix.
 
-    int rows, columns;
+    int n;
 
-    printf("Enter number of Rows of matrix. ");
-    scanf("%d", &rows);
+    printf("Enter number of Rows/Columns of matrix. "); // Rows and columns should be same.
+    scanf("%d", &n);
 
-    printf("Enter number of columns of matrix. ");
-    scanf("%d", &columns);
+    int mat[n][n];
 
-    int mat[rows][columns];
-
-    for (int i = 0; i < rows; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < columns; j++)
+        for (int j = 0; j < n; j++)
         {
             printf("\nEnter element mat[%d][%d]: ", i, j);
             scanf("%d", &mat[i][j]);
@@ -23,9 +20,9 @@ int main()
     }
 
     printf("\nMatrix = \n");
-    for (int i = 0; i < rows; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < columns; j++)
+        for (int j = 0; j < n; j++)
         {
             printf("%d ", mat[i][j]);
         }
@@ -34,7 +31,7 @@ int main()
 
     // transpose
 
-    for (int i = 0; i < columns; i++)
+    for (int i = 0; i < n; i++)
     {
         for (int j = 0; j <= i; j++)
         {
@@ -46,9 +43,19 @@ int main()
     }
 
     printf("\nTanspose of matrix = \n");
-    for (int i = 0; i < rows; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < columns; j++)
+        for (int j = 0; j < n; j++)
+        {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\nRotation of matrix = \n");
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = n - 1; j >= 0; j--)
         {
             printf("%d ", mat[i][j]);
         }
